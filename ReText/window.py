@@ -448,7 +448,7 @@ class ReTextWindow(QMainWindow):
 			return
 		if fileName:
 			markupClass = markups.get_markup_for_file_name(
-				fileName, return_class=True)
+				str(fileName), return_class=True)
 			if markupClass:
 				return markupClass
 		return self.defaultMarkup
@@ -892,7 +892,7 @@ class ReTextWindow(QMainWindow):
 		html = QTextStream(openfile).readAll()
 		openfile.close()
 		markupClass = markups.get_markup_for_file_name(
-			self.fileNames[self.ind], return_class=True)
+			str(self.fileNames[self.ind]), return_class=True)
 		self.highlighters[self.ind].docType = (markupClass.name if markupClass else '')
 		self.markups[self.ind] = self.getMarkup()
 		pt = not markupClass
