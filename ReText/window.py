@@ -670,7 +670,7 @@ class ReTextWindow(QMainWindow):
 			headers += '<meta name="generator" content="%s %s">\n' % \
 			(app_name, app_version)
 		fallbackTitle = self.getDocumentTitle() if includeTitle else ''
-		return self.markups[self.ind].get_whole_html(text,
+		return self.markups[self.ind].get_whole_html(str(text),
 			custom_headers=headers, include_stylesheet=includeStyleSheet,
 			fallback_title=fallbackTitle, webenv=webenv)
 	
