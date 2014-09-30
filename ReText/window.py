@@ -1088,7 +1088,7 @@ class ReTextWindow(QMainWindow):
 		if markup and not baseName:
 			text = self.editBoxes[self.ind].toPlainText()
 			try:
-				realTitle = markup.get_document_title(text)
+				realTitle = markup.get_document_title(str(text))
 			except:
 				self.printError()
 		if realTitle:
