@@ -68,7 +68,7 @@ def readListFromSettings(key, settings=settings):
 	if isinstance(value, str):
 		return [value]
 	else:
-		return value
+		return [str(e) for e in value.toList()]
 
 def writeListToSettings(key, value, settings=settings):
 	if len(value) > 1:
