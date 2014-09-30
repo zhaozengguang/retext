@@ -8,6 +8,7 @@ import re
 def isHeaderLine(text):
 	if len(text) < 3:
 		return False
+	text = str(text)
 	return (text[0] in '=-*~^+') and (text == text[0] * len(text))
 
 class ReTextHighlighter(QSyntaxHighlighter):
