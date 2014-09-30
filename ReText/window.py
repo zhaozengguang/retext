@@ -157,7 +157,7 @@ class ReTextWindow(QMainWindow):
 			shct=QKeySequence.FindPrevious, trig=lambda: self.find(back=True))
 		self.actionHelp = self.act(self.tr('Get help online'), icon='help-contents', trig=self.openHelp)
 		self.aboutWindowTitle = self.tr('About %s', 'Example of final string: About ReText')
-		self.aboutWindowTitle =  self.aboutWindowTitle % app_name
+		self.aboutWindowTitle =  str(self.aboutWindowTitle) % app_name
 		self.actionAbout = self.act(self.aboutWindowTitle, icon='help-about', trig=self.aboutDialog)
 		self.actionAbout.setMenuRole(QAction.AboutRole)
 		self.actionAboutQt = self.act(self.tr('About Qt'))
